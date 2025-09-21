@@ -13,10 +13,10 @@ model = tf.keras.models.load_model('ann_model.h5')
 with open('label_encoder_gender.pkl', 'rb') as file:
     label_encoder_gender = pickle.load(file)
 
-with open(r'C:\Study-Material\ANN Classification\onehot_encoder_geography.pkl', 'rb') as file:
+with open('onehot_encoder_geography.pkl', 'rb') as file:
     onehot_encoder_geo = pickle.load(file)
 
-with open(r'C:\Study-Material\ANN Classification\scaler.pickle.pkl', 'rb') as file:
+with open('scaler.pickle.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
 # streamlit app
@@ -67,3 +67,4 @@ if predict_probs>0.5:
 else:
 
     st.write("The customer is likely to stay with the bank")
+
