@@ -10,7 +10,7 @@ model = tf.keras.models.load_model('ann_model.h5')
 
 # load the encoders and scaler
 
-with open(r'C:\Study-Material\ANN Classification\label_encoder_gender.pkl', 'rb') as file:
+with open('label_encoder_gender.pkl', 'rb') as file:
     label_encoder_gender = pickle.load(file)
 
 with open(r'C:\Study-Material\ANN Classification\onehot_encoder_geography.pkl', 'rb') as file:
@@ -65,4 +65,5 @@ st.write(f"Churn Probability: {predict_probs:.2f}")
 if predict_probs>0.5:
     st.write("The customer is likely to leave the bank")
 else:
+
     st.write("The customer is likely to stay with the bank")
